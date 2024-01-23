@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link rel="icon" href="img/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <input class="burger" type="checkbox" id="burger" />
+        <label for="burger"></label>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a class="header-link" href="#sum">Summary</a></li>
+            <li><a class="header-link" href="#skills">Skills</a></li>
+            <li><a class="header-link" href="#projects">Projects</a></li>
+            <li><a class="header-link" href="#courses">Courses</a></li>
+            <li><a class="header-link" href="#code">Code example</a></li>
+            <li><a class="header-link" href="#lang">Languages</a></li>
+          </ul>
+        </nav>
+        <div class="up">
+          <img class="avatar" src="img/foto.jpg" alt="avatar" />
+          <div>
+            <h1 class="name">Angelina Ivanova</h1>
+            <h2>Front-End Developer</h2>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="item">
+          <div class="left-side">
+            <h2>Contacts</h2>
+            <ul class="list">
+              <li>+79114052449</li>
+              <li>angelinaivanova16@gmail.com</li>
+              <li>telegram: @angelinanikiv</li>
+            </ul>
+            <h2 id="skills">Skills</h2>
+            <ul class="list">
+              <li>React and Redux</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>version control (git, github)</li>
+              <li>REST API</li>
+            </ul>
+            <h2 id="lang">Languages</h2>
+            <ul class="list">
+              <li>Russian - native speaker</li>
+              <li>English - B1</li>
+            </ul>
+            <img class="sefr" src="img/sefr.png" alt="certificate sefr" />
+          </div>
+        </section>
+        <section class="item">
+          <div>
+            <h2 id="sum">Summary</h2>
+            <p>
+              Worked on projects with React and Redux. I have knowledge and
+              experience in JavaScript, HTML, CSS, version control (git,
+              github), REST API, application optimization. I’m not afraid of
+              legacy code; I’ve written class components and functional
+              components with React Hooks. I also know how to work with figma
+              and pixel perfect. I have experience working remotely.
+            </p>
+          </div>
+          <div>
+            <h2 id="projects">Projects</h2>
+            <ul>
+              <li>
+                <a
+                  class="text-link"
+                  href="https://angelinaivanova16.github.io/social-network/"
+                  >social-network</a
+                >
+                <span>(test login details:
+                  Email: free@samuraijs.com
+                  Password: free
+                  )</span>
+              </li>
+              <li>
+                <a
+                  class="text-link"
+                  href="https://angelinaivanova16.github.io/food-delivery/"
+                  >food-delivery</a
+                >
+                <span>(You can register, log in and see how the project works)</span>
+              </li>
+              <li>
+                <a
+                  class="text-link"
+                  href="https://angelinaivanova16.github.io/eco-sounds/eco-sounds/"
+                  >eco-sounds</a
+                >
+                <span>(JS native)</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 id="courses">Courses</h2>
+            <ul>
+              <li>
+                Innopolis University - course "Basics of front-end development",
+                2023.
+              </li>
+              <li>
+                The Rolling Scopes School - "JavaScript/Front-end. Stage 0.
+                2022Q1"<a
+                  class="projects-link"
+                  href="https://app.rs.school/certificate/vqydbhab"
+                  >(Certificate)</a
+                >
+              </li>
+              <li>
+                Karelian School of a young programmer - "Junior Front-End
+                Developer", 2021.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 id="edu">Education</h2>
+            <p>
+              Karelian State Pedagogical Academy, the faculty of psychology
+              (specialist), 2011.
+            </p>
+          </div>
+          <div>
+            <h2 id="code">Code example</h2>
+            <pre>
+                        <code>
+function guessNumber() {
+  let rightAnswer = Math.floor(Math.random() * 10) + 1;
+  let attempts = 5;
+
+  function writeAnswer(){
+    let userAnswer = +prompt('Угадай число от 1 до 10');
+    attempts = attempts - 1;
+
+    if (userAnswer == rightAnswer) {
+    let again = confirm ('Вы угадали!!! Хотели бы сыграть еще?');
+    (again === true) ? guessNumber() : alert ('Игра окончена.');
+    } else {
+    if (userAnswer > rightAnswer && attempts > 0) {
+        alert (`Загаданное число меньше, осталось попыток: ${attempts}`);
+    } else if(userAnswer < rightAnswer && userAnswer > 0 && attempts > 0){
+        alert (`Загаданное число больше, осталось попыток: ${attempts}`)
+    } else if (isNaN(userAnswer) && attempts > 0) {
+        alert ('Введи число!')
+    } else if (userAnswer === 0) {
+        alert ('Игра окончена.');
+        return;
+    } else if (attempts == 0) {
+        let again2 = confirm ('Попытки закончились, сыграем еще?');
+        (again2 === true) ? guessNumber() : alert ('Игра окончена.');
+        return;
+    }
+        return writeAnswer();
+    }
+  }
+
+  writeAnswer();
+
+  };
+    
+guessNumber();
+                        </code>
+                    </pre>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          <a class="footer-link" href="https://github.com/angelinaivanova16"
+            >Visit my GitHub</a
+          >
+        </p>
+        <p>© 2023</p>
+      </footer>
+    </div>
+    <script>
+      console.log(``);
+    </script>
+  </body>
+</html>
